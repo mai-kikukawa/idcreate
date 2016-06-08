@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipe: MyString
+  media: MyString
+  start: MyString
+  finish: MyString
+  rink: MyString
+
+two:
+  tipe: MyString
+  media: MyString
+  start: MyString
+  finish: MyString
+  rink: MyString

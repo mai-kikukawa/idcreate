@@ -1,12 +1,19 @@
-<h1>リクエスト一覧</h1>
-<% @messages.each do |message| %>
-  広告種別:<%= message.tipe %>
-  媒体種別:<%= message.media %>
-  出稿開始日:<%= message.start %>
-  出稿終了日:<%= message.finish %>
-  リンク先URL:<%= message.rink %>
-  <br>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    リクエスト一覧
+  </div>
+    
+  <div class="panel-body">
+    <% @messages.each do |message| %>
+      <span class="label label-info"><%= message.tipe %></span>
+      <%= message.media %>
+      <%= message.start %>
+      <%= message.finish %>
+      <%= message.rink %>
+      <br>
+    <% end %>
+  </div>
+</div>
 
 <%= form_for(@message) do |f| %>
   広告種別:

@@ -1,2 +1,28 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+<h1>リクエスト一覧</h1>
+<% @messages.each do |message| %>
+  広告種別:<%= message.tipe %>
+  媒体種別:<%= message.media %>
+  出稿開始日:<%= message.start %>
+  出稿終了日:<%= message.finish %>
+  リンク先URL:<%= message.rink %>
+  <br>
+<% end %>
+
+<%= form_for(@message) do |f| %>
+  広告種別:
+  <%= f.text_field :tipe %>
+
+  媒体種別:
+  <%= f.text_field :media %>
+  
+  出稿開始日:
+  <%= f.text_field :start %>
+  
+  出稿終了日:
+  <%= f.text_field :finish %>
+  
+  リンク先URL:
+  <%= f.text_field :rink %>
+
+  <%= f.submit %>
+<% end %>
